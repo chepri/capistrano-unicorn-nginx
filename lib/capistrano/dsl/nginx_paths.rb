@@ -11,7 +11,7 @@ module Capistrano
       end
 
       def centos_nginx_conf_file
-        "#{fetch(:nginx_location)}/conf.d/#{fetch(:nginx_config_name)}"
+        "#{fetch(:nginx_location)}/conf.d/#{fetch(:nginx_config_name)}.conf"
       end
 
       def nginx_service_path

@@ -53,7 +53,7 @@ namespace :unicorn do
       on roles :app do
         # for some reason i kept getting command not found here
         #execute :service, fetch(:unicorn_service), command
-        `sudo service unicorn_deal_digger_production #{command}`
+        sudo 'service', fetch(:unicorn_service), command
       end
     end
   end
